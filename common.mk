@@ -28,9 +28,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
@@ -206,6 +203,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
 # Face unlock
+TARGET_USES_NATIVE_FACEUNLOCK := true
+
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.face-service.oneplus
 
